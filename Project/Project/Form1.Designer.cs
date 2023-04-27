@@ -286,6 +286,7 @@ namespace Project
             this.l_pass.PasswordChar = '*';
             this.l_pass.Size = new System.Drawing.Size(399, 24);
             this.l_pass.TabIndex = 7;
+            this.l_pass.Text = "123";
             this.l_pass.TextChanged += new System.EventHandler(this.l_pass_TextChanged);
             this.l_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.l_pass_KeyDown);
             // 
@@ -310,6 +311,7 @@ namespace Project
             this.l_user.Name = "l_user";
             this.l_user.Size = new System.Drawing.Size(399, 24);
             this.l_user.TabIndex = 6;
+            this.l_user.Text = "m7mmed";
             this.l_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.l_pass_KeyDown);
             // 
             // label14
@@ -338,6 +340,7 @@ namespace Project
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(824, 490);
             this.loginPanel.TabIndex = 3;
+            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
             // 
             // registerPanel
             // 
@@ -367,8 +370,8 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(824, 490);
-            this.Controls.Add(this.registerPanel);
             this.Controls.Add(this.loginPanel);
+            this.Controls.Add(this.registerPanel);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";

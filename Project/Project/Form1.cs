@@ -122,5 +122,10 @@ namespace Project
         {
 
         }
+
+        private void loginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

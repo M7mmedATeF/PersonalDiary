@@ -2,7 +2,6 @@ M:\University\software project\Project\Project\bin\Debug\Project.exe.config
 M:\University\software project\Project\Project\bin\Debug\Project.exe
 M:\University\software project\Project\Project\bin\Debug\Project.pdb
 M:\University\software project\Project\Project\bin\Debug\Oracle.DataAccess.dll
-M:\University\software project\Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
 M:\University\software project\Project\Project\obj\Debug\Project.Form1.resources
 M:\University\software project\Project\Project\obj\Debug\Project.Properties.Resources.resources
 M:\University\software project\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
@@ -11,3 +10,11 @@ M:\University\software project\Project\Project\obj\Debug\Project.csproj.CopyComp
 M:\University\software project\Project\Project\obj\Debug\Project.exe
 M:\University\software project\Project\Project\obj\Debug\Project.pdb
 M:\University\software project\Project\Project\obj\Debug\Project.Home.resources
+M:\University\software project\Project\Project\obj\Debug\Project.MyDiaries.resources
+M:\University\software project\Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+M:\University\software project\Project\Project\obj\Debug\Project.MyComplaints.resources
+M:\University\software project\Project\Project\obj\Debug\Project.ComplaintCTRL.resources
+M:\University\software project\Project\Project\obj\Debug\Project.AddNewPageCTRL.resources
+M:\University\software project\Project\Project\obj\Debug\Project.DiaryPageCTRL.resources
+M:\University\software project\Project\Project\obj\Debug\Project.Admin.resources
+M:\University\software project\Project\Project\obj\Debug\Project.viewDiary.resources
