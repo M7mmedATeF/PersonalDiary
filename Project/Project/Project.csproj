@@ -124,6 +124,12 @@
       <DependentUpon>MyDiaries.cs</DependentUpon>
     </Compile>
     <Compile Include="page.cs" />
+    <Compile Include="ProfileCTRL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileCTRL.Designer.cs">
+      <DependentUpon>ProfileCTRL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="user.cs" />
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyDiaries.resx">
       <DependentUpon>MyDiaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileCTRL.resx">
+      <DependentUpon>ProfileCTRL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

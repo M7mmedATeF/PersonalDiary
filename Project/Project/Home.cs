@@ -11,6 +11,7 @@ namespace Project
         MyDiaries diaryPanel;
         MyComplaints compPanel;
         viewDiary viewDiaryPanel;
+        ProfileCTRL profile;
         bool openAdmin = false;
         public Home(OracleConnection connection, User userData)
         {
@@ -18,6 +19,7 @@ namespace Project
             user = userData;
             InitializeComponent();
             diaryPanel = new MyDiaries(connection, user, ContainerPanel);
+            profile = new ProfileCTRL(conn);
             compPanel = new MyComplaints(connection, user);
             diaryPanel.viewEvent += new EventHandler<Page>(viewEvent);
             HomeController.Navigate(ContainerPanel, diaryPanel);
@@ -57,7 +59,7 @@ namespace Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            HomeController.Navigate(ContainerPanel, profile);
         }
 
         private void button4_Click(object sender, EventArgs e)
