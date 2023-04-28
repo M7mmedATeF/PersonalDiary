@@ -23,8 +23,8 @@ namespace Project
         {
             hedline.Text = page.headline;
             detaile.Text = page.details;
-            AddDate.Text = page.date.ToString();
-            LastModDate.Text = page.lastModifiedDate.ToString();
+            AddDate.Text = HomeController.FormateDate(page.date);
+            LastModDate.Text = HomeController.FormateDate(page.lastModifiedDate);
         }
 
         public event EventHandler ev;
@@ -33,5 +33,12 @@ namespace Project
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            goBack(sender, e);
+        }
+
+        public event EventHandler goBack;
     }
 }

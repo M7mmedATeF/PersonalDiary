@@ -29,18 +29,19 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComplaintCTRL));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.headline = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.detaile = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.status = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -50,7 +51,7 @@ namespace Project
             this.flowLayoutPanel1.Controls.Add(this.date);
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.status);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(146, 33);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(164, 14);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1071, 49);
             this.flowLayoutPanel1.TabIndex = 11;
@@ -87,73 +88,6 @@ namespace Project
             this.date.TabIndex = 3;
             this.date.Text = "jun 25, 2023";
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button3.Location = new System.Drawing.Point(1302, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 51);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.Location = new System.Drawing.Point(1302, 63);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 51);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.Location = new System.Drawing.Point(1302, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 51);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "View";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // detaile
-            // 
-            this.detaile.AutoSize = true;
-            this.detaile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detaile.Location = new System.Drawing.Point(154, 103);
-            this.detaile.Name = "detaile";
-            this.detaile.Size = new System.Drawing.Size(926, 48);
-            this.detaile.TabIndex = 7;
-            this.detaile.Text = "[Grab your reader’s attention with a great quote from the document or use this sp" +
-    "ace to emphasize a key point.\r\nTo place this text box anywhere on the page, just" +
-    " drag it.]";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 190);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1389, 2);
-            this.panel1.TabIndex = 12;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -176,23 +110,72 @@ namespace Project
             this.status.TabIndex = 5;
             this.status.Text = "Done";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button1.Location = new System.Drawing.Point(1253, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 127);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "View";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // detaile
+            // 
+            this.detaile.AutoSize = true;
+            this.detaile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detaile.Location = new System.Drawing.Point(170, 71);
+            this.detaile.Name = "detaile";
+            this.detaile.Size = new System.Drawing.Size(926, 48);
+            this.detaile.TabIndex = 7;
+            this.detaile.Text = "[Grab your reader’s attention with a great quote from the document or use this sp" +
+    "ace to emphasize a key point.\r\nTo place this text box anywhere on the page, just" +
+    " drag it.]";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 159);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1389, 2);
+            this.panel1.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(53, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // ComplaintCTRL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.detaile);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ComplaintCTRL";
-            this.Size = new System.Drawing.Size(1389, 192);
+            this.Size = new System.Drawing.Size(1389, 161);
             this.Load += new System.EventHandler(this.ComplaintCTRL_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,12 +187,11 @@ namespace Project
         private System.Windows.Forms.Label headline;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label detaile;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -47,6 +47,7 @@ namespace Project
         {
             String l_username = l_user.Text;
             String l_password = l_pass.Text;
+            bool gotUser = false;
 
             OracleCommand loginCMD = new OracleCommand();
             loginCMD.Connection = conn;
@@ -60,15 +61,24 @@ namespace Project
                     user.id = Convert.ToInt32(dr[0]);
                     user.name = dr[1].ToString();
                     user.username = dr[2].ToString();
-                    user.email = dr[3].ToString();
+                    user.email = dr[4].ToString();
+                    user.userLVL = Convert.ToInt32(dr[5]);
                 }
-                Home home = new Home(conn, user);
-                this.Hide();
-                home.ShowDialog();
+
+                if (dr.HasRows)
+                {
+                    Home home = new Home(conn, user, this);
+                    this.Hide();
+                    home.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Username or password is wrong .. check them please");
+                }
             }
-            catch
+            catch(Exception error)
             {
-                MessageBox.Show("Username or password is wrong .. check them please");
+                MessageBox.Show(error.ToString());
             }
         }
 
@@ -103,7 +113,7 @@ namespace Project
                     regCMD.ExecuteNonQuery();
                     registerPanel.SendToBack();
                 }
-                catch (Exception err)
+                catch
                 {
                     MessageBox.Show("Somthing went wrong, Please try again later");
                 }

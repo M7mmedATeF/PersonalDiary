@@ -33,13 +33,17 @@ CREATE SEQUENCE userIdSeq START WITH 1;
 CREATE SEQUENCE pageIdSeq START WITH 1;
 CREATE SEQUENCE compIdSeq START WITH 1;
 
+Insert into users 
+(id, name, user_name, email, password, userlvl) VALUES (userIdSeq.nextval, 'admin','admin','admin@admin.com','admin',2);
+
 create or replace procedure registUser
 (rname in varchar2, runame in varchar2, remail in varchar2, rpass in varchar2)
 as
 begin
 INSERT into users 
-(ID ,name, user_name, email, password) 
-values (userIdSeq.nextval ,rname, runame, remail, rpass);
+(ID ,name, user_name, email, password, userlvl) 
+values
+(userIdSeq.nextval ,rname, runame, remail, rpass, 1);
 end;
 
 Create or replace PROCEDURE addPage

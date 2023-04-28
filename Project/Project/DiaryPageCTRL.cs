@@ -18,7 +18,7 @@ namespace Project
             InitializeComponent();
             this.page = page;
             headline.Text = Splitter(page.headline, 20);
-            date.Text = page.date.ToString();
+            date.Text = HomeController.FormateDate(page.date);
             detaile.Text = Splitter(page.details, 100);
         }
 
@@ -62,6 +62,16 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             view(sender, page);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            edit(sender, page);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            delete(sender, page);
         }
     }
 }

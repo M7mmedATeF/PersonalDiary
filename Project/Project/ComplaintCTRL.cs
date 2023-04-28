@@ -15,8 +15,8 @@ namespace Project
         Complaint complaint;
         public ComplaintCTRL(Complaint cp)
         {
-            complaint = cp;
             InitializeComponent();
+            complaint = cp;
             headline.Text = Splitter(cp.headline, 30);
             detaile.Text = Splitter(cp.details, 100);
             if(cp.status == 1)

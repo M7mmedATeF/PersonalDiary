@@ -55,7 +55,8 @@ namespace Project
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(1208, 24);
+            this.button4.Location = new System.Drawing.Point(1208, 19);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(178, 59);
             this.button4.TabIndex = 17;

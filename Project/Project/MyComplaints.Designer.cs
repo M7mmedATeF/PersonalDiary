@@ -36,11 +36,16 @@ namespace Project
             // 
             // compPanel
             // 
+            this.compPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.compPanel.AutoScroll = true;
+            this.compPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.compPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.compPanel.Location = new System.Drawing.Point(0, 95);
             this.compPanel.Name = "compPanel";
             this.compPanel.Size = new System.Drawing.Size(1413, 608);
             this.compPanel.TabIndex = 21;
+            this.compPanel.WrapContents = false;
             this.compPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PagesPanel_Paint);
             // 
             // button4
@@ -52,12 +57,14 @@ namespace Project
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(1156, 19);
+            this.button4.Location = new System.Drawing.Point(1159, 19);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(230, 59);
             this.button4.TabIndex = 20;
             this.button4.Text = "Add Complaint";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label14
             // 
@@ -74,13 +81,14 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.compPanel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label14);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "MyComplaints";
-            this.Size = new System.Drawing.Size(1413, 715);
+            this.Size = new System.Drawing.Size(1416, 715);
             this.Load += new System.EventHandler(this.MyComplaints_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

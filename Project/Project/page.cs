@@ -12,6 +12,10 @@ namespace Project
         public String headline, details;
         public DateTime date, lastModifiedDate;
 
+        public Page()
+        {
+
+        }
         public Page(int id, String headline, String details, String date, String lastDate, int userId)
         {
             this.id = id;

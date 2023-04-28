@@ -1,7 +1,7 @@
 ﻿
 namespace Project
 {
-    partial class viewDiary
+    partial class ViewComplaint
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,10 +36,10 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LastModDate = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LastModDate = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.PagesPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -51,11 +51,11 @@ namespace Project
             this.PagesPanel.Controls.Add(this.detaile);
             this.PagesPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PagesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PagesPanel.Location = new System.Drawing.Point(10, 167);
+            this.PagesPanel.Location = new System.Drawing.Point(0, 175);
             this.PagesPanel.Name = "PagesPanel";
             this.PagesPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.PagesPanel.Size = new System.Drawing.Size(1393, 538);
-            this.PagesPanel.TabIndex = 21;
+            this.PagesPanel.Size = new System.Drawing.Size(1413, 538);
+            this.PagesPanel.TabIndex = 29;
             this.PagesPanel.WrapContents = false;
             // 
             // detaile
@@ -79,23 +79,22 @@ namespace Project
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.button4.Location = new System.Drawing.Point(219, 18);
+            this.button4.Location = new System.Drawing.Point(219, 9);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 59);
-            this.button4.TabIndex = 20;
+            this.button4.TabIndex = 28;
             this.button4.Text = "<";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // hedline
             // 
             this.hedline.AutoSize = true;
             this.hedline.Font = new System.Drawing.Font("Montserrat", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hedline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.hedline.Location = new System.Drawing.Point(278, 25);
+            this.hedline.Location = new System.Drawing.Point(278, 16);
             this.hedline.Name = "hedline";
             this.hedline.Size = new System.Drawing.Size(186, 43);
-            this.hedline.TabIndex = 19;
+            this.hedline.TabIndex = 27;
             this.hedline.Text = "Headline";
             // 
             // label1
@@ -107,16 +106,15 @@ namespace Project
             this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 22;
             this.label1.Text = "Add Date:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.AddDate);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(276, 87);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(276, 78);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1054, 34);
-            this.flowLayoutPanel1.TabIndex = 15;
+            this.flowLayoutPanel1.TabIndex = 25;
             // 
             // AddDate
             // 
@@ -130,62 +128,60 @@ namespace Project
             this.AddDate.TabIndex = 23;
             this.AddDate.Text = "addDate";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 713);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1413, 2);
+            this.panel1.TabIndex = 26;
+            // 
+            // LastModDate
+            // 
+            this.LastModDate.AutoSize = true;
+            this.LastModDate.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastModDate.ForeColor = System.Drawing.Color.Red;
+            this.LastModDate.Location = new System.Drawing.Point(74, 0);
+            this.LastModDate.Margin = new System.Windows.Forms.Padding(3, 0, 20, 0);
+            this.LastModDate.Name = "LastModDate";
+            this.LastModDate.Size = new System.Drawing.Size(105, 23);
+            this.LastModDate.TabIndex = 27;
+            this.LastModDate.Text = "In Queue";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 24);
+            this.label3.Size = new System.Drawing.Size(65, 24);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Last Modified:";
-            // 
-            // LastModDate
-            // 
-            this.LastModDate.AutoSize = true;
-            this.LastModDate.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastModDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.LastModDate.Location = new System.Drawing.Point(134, 0);
-            this.LastModDate.Margin = new System.Windows.Forms.Padding(3, 0, 20, 0);
-            this.LastModDate.Name = "LastModDate";
-            this.LastModDate.Size = new System.Drawing.Size(104, 23);
-            this.LastModDate.TabIndex = 27;
-            this.LastModDate.Text = "lasttMod";
+            this.label3.Text = "Status:";
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label3);
             this.flowLayoutPanel2.Controls.Add(this.LastModDate);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(276, 124);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(276, 115);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1054, 34);
-            this.flowLayoutPanel2.TabIndex = 24;
+            this.flowLayoutPanel2.TabIndex = 30;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(10, 165);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1393, 2);
-            this.panel1.TabIndex = 15;
-            // 
-            // viewDiary
+            // ViewComplaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.PagesPanel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.hedline);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "viewDiary";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Name = "ViewComplaint";
             this.Size = new System.Drawing.Size(1413, 715);
-            this.Load += new System.EventHandler(this.viewDiary_Load);
             this.PagesPanel.ResumeLayout(false);
             this.PagesPanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -200,15 +196,15 @@ namespace Project
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel PagesPanel;
+        private System.Windows.Forms.Label detaile;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label hedline;
-        private System.Windows.Forms.Label detaile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label AddDate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LastModDate;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LastModDate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

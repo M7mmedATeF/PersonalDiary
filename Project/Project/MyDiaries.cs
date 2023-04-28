@@ -29,7 +29,7 @@ namespace Project
         private void button4_Click(object sender, EventArgs e)
         {
             containerPanel.Controls.Clear();
-            containerPanel.Controls.Add(new AddNewPageCTRL(conn, user, containerPanel, this));
+            containerPanel.Controls.Add(new AddNewPageCTRL(conn, user, containerPanel, this, new Page(), false));
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -48,13 +48,27 @@ namespace Project
             OracleDataReader dr = DiaryController.getPages(user.id, conn);
             while (dr.Read())
             {
-                Page pg = new Page(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), Convert.ToInt32(dr[5]));
+                Page pg = new Page(Convert.ToInt32(dr[0]), HomeController.decryptSTR(dr[1].ToString()), HomeController.decryptSTR(dr[2].ToString()), dr[3].ToString(), dr[4].ToString(), Convert.ToInt32(dr[5]));
                 DiaryPageCTRL dp = new DiaryPageCTRL(pg);
                 dp.view += new EventHandler<Page>(this.viewEvent);
+                dp.edit += new EventHandler<Page>(this.editPage);
+                dp.delete += new EventHandler<Page>(this.deletePage);
                 PagesPanel.Controls.Add(dp);
             }
         }
 
         public event EventHandler<Page> viewEvent;
+
+        private void deletePage(object sender, Page page)
+        {
+            DiaryController.deletePage(page, conn);
+            this.resetDiaryPanel();
+        }
+
+        private void editPage(object sender, Page page)
+        {
+            containerPanel.Controls.Clear();
+            containerPanel.Controls.Add(new AddNewPageCTRL(conn, user, containerPanel, this, page, true));
+        }
     }
 }

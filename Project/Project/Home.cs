@@ -12,17 +12,43 @@ namespace Project
         MyComplaints compPanel;
         viewDiary viewDiaryPanel;
         ProfileCTRL profile;
-        bool openAdmin = false;
-        public Home(OracleConnection connection, User userData)
+        Form1 loginForm;
+        bool logout = false;
+        public Home(OracleConnection connection, User userData, Form1 loginForm)
         {
+            InitializeComponent();
             conn = connection;
             user = userData;
-            InitializeComponent();
-            diaryPanel = new MyDiaries(connection, user, ContainerPanel);
-            profile = new ProfileCTRL(conn);
-            compPanel = new MyComplaints(connection, user);
-            diaryPanel.viewEvent += new EventHandler<Page>(viewEvent);
+            this.loginForm = loginForm;
+
+            if (user.userLVL == 2)
+            {
+                adminNavBTN.Visible = true;
+                ComplaintBTN.Visible = false;
+            }
+
+
+            initProfile(connection);
+            initMyCompPanel(connection, userData);
+            initMyDiary(connection, userData);
+
             HomeController.Navigate(ContainerPanel, diaryPanel);
+        }
+
+        private void initProfile(OracleConnection connection)
+        {
+            profile = new ProfileCTRL(connection);
+        }
+
+        private void initMyDiary(OracleConnection connection, User userData)
+        {
+            diaryPanel = new MyDiaries(connection, userData, ContainerPanel);
+            diaryPanel.viewEvent += new EventHandler<Page>(viewEvent);
+        }
+
+        private void initMyCompPanel(OracleConnection connection, User userData)
+        {
+            compPanel = new MyComplaints(connection, userData, ContainerPanel);
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -32,23 +58,14 @@ namespace Project
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void myDiaries1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Home_Load_1(object sender, EventArgs e)
-        {
-
+            if (!logout)
+                Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             compPanel.resetCompPanel();
-            HomeController.Navigate(ContainerPanel ,compPanel);
+            HomeController.Navigate(ContainerPanel, compPanel);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,16 +85,23 @@ namespace Project
             adminFrom.Show();
         }
 
-        private void viewDiary1_ev(object sender, EventArgs e)
+        private void viewEvent(object sender, Page page)
+        {
+            viewDiaryPanel = new viewDiary(page);
+            viewDiaryPanel.goBack += new EventHandler(this.button1_Click);
+            HomeController.Navigate(ContainerPanel, viewDiaryPanel);
+        }
+
+        private void NavPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void viewEvent(object sender, Page e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            Page page = e;
-            viewDiaryPanel = new viewDiary(page);
-            HomeController.Navigate(ContainerPanel, viewDiaryPanel);
+            logout = true;
+            this.Close();
+            loginForm.Show();
         }
     }
 }
