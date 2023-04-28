@@ -4,6 +4,7 @@ create TABLE Users(
   user_name varchar2(225) NOT NULL UNIQUE,
   password varchar2(225) NOT NULL,
   email varchar2(225) NOT NULL,
+  userlvl int default 1,
   PRIMARY KEY (ID)
 );
 
