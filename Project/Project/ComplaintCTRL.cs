@@ -51,5 +51,11 @@ namespace Project
                 return str;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            viewComp(sender, complaint);
+        }
+        public event EventHandler<Complaint> viewComp;
     }
 }

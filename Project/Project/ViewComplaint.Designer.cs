@@ -182,6 +182,7 @@ namespace Project
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ViewComplaint";
             this.Size = new System.Drawing.Size(1413, 715);
+            this.Load += new System.EventHandler(this.ViewComplaint_Load);
             this.PagesPanel.ResumeLayout(false);
             this.PagesPanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

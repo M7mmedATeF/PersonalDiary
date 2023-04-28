@@ -12,9 +12,16 @@ namespace Project
 {
     public partial class ViewComplaint : UserControl
     {
-        public ViewComplaint()
+        Complaint comp;
+        public ViewComplaint(Complaint cp)
         {
             InitializeComponent();
+            comp = cp;
+        }
+
+        private void ViewComplaint_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,3 +20,4 @@ M:\University\software project\Project\Project\obj\Debug\Project.Admin.resources
 M:\University\software project\Project\Project\obj\Debug\Project.viewDiary.resources
 M:\University\software project\Project\Project\obj\Debug\Project.AddNewComplaintCTRL.resources
 M:\University\software project\Project\Project\obj\Debug\Project.ProfileCTRL.resources
+M:\University\software project\Project\Project\obj\Debug\Project.ViewComplaint.resources

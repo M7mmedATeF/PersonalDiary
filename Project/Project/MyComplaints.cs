@@ -17,6 +17,7 @@ namespace Project
         OracleConnection conn;
         User user;
         Control mainPanel;
+        ViewComplaint viewComp;
         public MyComplaints(OracleConnection connection, User userData, Control mainPanel)
         {
             InitializeComponent();
@@ -43,9 +44,16 @@ namespace Project
             {
                 Complaint comp = new Complaint(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), Convert.ToInt32(dr[4]), Convert.ToInt32(dr[5]));
                 ComplaintCTRL cp = new ComplaintCTRL(comp);
+                cp.viewComp += new EventHandler<Complaint>(this.viewCompFN);
                 cp.Margin = new Padding(0);
                 compPanel.Controls.Add(cp);
             }
+        }
+
+        private void viewCompFN(object sender, Complaint cp)
+        {
+            viewComp = new ViewComplaint(cp);
+            HomeController.Navigate(this.mainPanel, viewComp);
         }
 
         private void button4_Click(object sender, EventArgs e)
