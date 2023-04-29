@@ -43,8 +43,9 @@ namespace Project
             this.button1 = new System.Windows.Forms.Button();
             this.adminNavBTN = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
-            this.ContainerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ContainerPanel = new System.Windows.Forms.Panel();
+            this.userName = new System.Windows.Forms.Label();
             this.NavPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.LogoPanel.SuspendLayout();
@@ -53,6 +54,7 @@ namespace Project
             // 
             // NavPanel
             // 
+            this.NavPanel.Controls.Add(this.userName);
             this.NavPanel.Controls.Add(this.panel1);
             this.NavPanel.Controls.Add(this.flowLayoutPanel1);
             this.NavPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,9 +82,9 @@ namespace Project
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.adminNavBTN);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(398, -3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(500, -3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1018, 85);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(916, 85);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // button2
@@ -93,7 +95,7 @@ namespace Project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(916, 0);
+            this.button2.Location = new System.Drawing.Point(814, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 77);
@@ -109,7 +111,7 @@ namespace Project
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.button3.Location = new System.Drawing.Point(740, 0);
+            this.button3.Location = new System.Drawing.Point(638, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 77);
@@ -125,7 +127,7 @@ namespace Project
             this.ComplaintBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComplaintBTN.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComplaintBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.ComplaintBTN.Location = new System.Drawing.Point(564, 0);
+            this.ComplaintBTN.Location = new System.Drawing.Point(462, 0);
             this.ComplaintBTN.Margin = new System.Windows.Forms.Padding(0);
             this.ComplaintBTN.Name = "ComplaintBTN";
             this.ComplaintBTN.Size = new System.Drawing.Size(176, 77);
@@ -141,7 +143,7 @@ namespace Project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.button1.Location = new System.Drawing.Point(388, 0);
+            this.button1.Location = new System.Drawing.Point(286, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(176, 77);
@@ -157,7 +159,7 @@ namespace Project
             this.adminNavBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminNavBTN.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminNavBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.adminNavBTN.Location = new System.Drawing.Point(212, 0);
+            this.adminNavBTN.Location = new System.Drawing.Point(110, 0);
             this.adminNavBTN.Margin = new System.Windows.Forms.Padding(0);
             this.adminNavBTN.Name = "adminNavBTN";
             this.adminNavBTN.Size = new System.Drawing.Size(176, 77);
@@ -176,6 +178,16 @@ namespace Project
             this.LogoPanel.Size = new System.Drawing.Size(141, 160);
             this.LogoPanel.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 158);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // ContainerPanel
             // 
             this.ContainerPanel.AutoSize = true;
@@ -186,15 +198,16 @@ namespace Project
             this.ContainerPanel.Size = new System.Drawing.Size(1413, 715);
             this.ContainerPanel.TabIndex = 2;
             // 
-            // pictureBox1
+            // userName
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Montserrat", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.userName.Location = new System.Drawing.Point(225, 18);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(123, 43);
+            this.userName.TabIndex = 23;
+            this.userName.Text = "Login";
             // 
             // Home
             // 
@@ -212,6 +225,7 @@ namespace Project
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.Load += new System.EventHandler(this.Home_Load);
             this.NavPanel.ResumeLayout(false);
+            this.NavPanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.LogoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -233,5 +247,6 @@ namespace Project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label userName;
     }
 }

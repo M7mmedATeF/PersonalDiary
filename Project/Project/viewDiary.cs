@@ -27,18 +27,10 @@ namespace Project
             LastModDate.Text = HomeController.FormateDate(page.lastModifiedDate);
         }
 
-        public event EventHandler ev;
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            goBack(sender, e);
-        }
-
         public event EventHandler goBack;
     }
 }

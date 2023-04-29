@@ -20,7 +20,7 @@ namespace Project
             conn = connection;
             user = userData;
             this.loginForm = loginForm;
-
+            userName.Text = user.name;
             if (user.userLVL == 2)
             {
                 adminNavBTN.Visible = true;
@@ -37,7 +37,7 @@ namespace Project
 
         private void initProfile(OracleConnection connection)
         {
-            profile = new ProfileCTRL(connection);
+            profile = new ProfileCTRL(connection, user);
         }
 
         private void initMyDiary(OracleConnection connection, User userData)
