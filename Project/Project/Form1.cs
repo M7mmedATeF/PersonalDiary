@@ -94,6 +94,7 @@ namespace Project
             String email = remail.Text;
             String pass = rpass.Text;
             String cpass = rcpass.Text;
+            bool gotERR = false;
 
             if (pass != cpass)
                 MessageBox.Show("passwords must be same");
@@ -113,12 +114,14 @@ namespace Project
                     regCMD.ExecuteNonQuery();
                     registerPanel.SendToBack();
                 }
-                catch
+                catch(Exception err)
                 {
-                    MessageBox.Show("Somthing went wrong, Please try again later");
+                    gotERR = true;
+                    MessageBox.Show("Somthing went wrong, Please try again later\n" + err.ToString());
                 }
 
-                MessageBox.Show("User registerd successfully");
+                if(!gotERR)
+                    MessageBox.Show("User registerd successfully");
             }
         }
 

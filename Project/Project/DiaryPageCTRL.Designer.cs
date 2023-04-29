@@ -37,11 +37,13 @@ namespace Project
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.detaile = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.detaile = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -135,18 +137,6 @@ namespace Project
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // detaile
-            // 
-            this.detaile.AutoSize = true;
-            this.detaile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detaile.Location = new System.Drawing.Point(192, 101);
-            this.detaile.Name = "detaile";
-            this.detaile.Size = new System.Drawing.Size(926, 48);
-            this.detaile.TabIndex = 13;
-            this.detaile.Text = "[Grab your reader’s attention with a great quote from the document or use this sp" +
-    "ace to emphasize a key point.\r\nTo place this text box anywhere on the page, just" +
-    " drag it.]";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
@@ -166,17 +156,38 @@ namespace Project
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.detaile);
+            this.panel2.Location = new System.Drawing.Point(184, 86);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1071, 66);
+            this.panel2.TabIndex = 20;
+            // 
+            // detaile
+            // 
+            this.detaile.AutoSize = true;
+            this.detaile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detaile.Location = new System.Drawing.Point(6, 10);
+            this.detaile.MaximumSize = new System.Drawing.Size(1060, 0);
+            this.detaile.Name = "detaile";
+            this.detaile.Size = new System.Drawing.Size(926, 48);
+            this.detaile.TabIndex = 14;
+            this.detaile.Text = "[Grab your reader’s attention with a great quote from the document or use this sp" +
+    "ace to emphasize a key point.\r\nTo place this text box anywhere on the page, just" +
+    " drag it.]";
+            // 
             // DiaryPageCTRL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.detaile);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.White;
@@ -186,8 +197,9 @@ namespace Project
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -200,8 +212,9 @@ namespace Project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label detaile;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label detaile;
     }
 }

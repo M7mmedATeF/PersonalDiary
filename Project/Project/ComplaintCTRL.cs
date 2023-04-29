@@ -18,7 +18,7 @@ namespace Project
             InitializeComponent();
             complaint = cp;
             headline.Text = Splitter(cp.headline, 30);
-            detaile.Text = Splitter(cp.details, 100);
+            detaile.Text = Splitter(cp.details, 150);
             if(cp.status == 1)
             {
                 status.Text = "In Queue";
@@ -57,5 +57,10 @@ namespace Project
             viewComp(sender, complaint);
         }
         public event EventHandler<Complaint> viewComp;
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

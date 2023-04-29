@@ -19,7 +19,7 @@ namespace Project
             this.page = page;
             headline.Text = Splitter(page.headline, 20);
             date.Text = HomeController.FormateDate(page.date);
-            detaile.Text = Splitter(page.details, 100);
+            detaile.Text = Splitter(page.details, 200);
         }
 
         private void label2_Click(object sender, EventArgs e)

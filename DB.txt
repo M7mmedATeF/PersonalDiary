@@ -11,7 +11,7 @@ create TABLE Users(
 create TABLE pages(
   ID int NOT NULL,
   head_line varchar(225) NOT NULL,
-  details varchar(1000) NOT NULL UNIQUE,
+  details varchar(4000) NOT NULL UNIQUE,
   add_date DATE NOT NULL,
   last_modified DATE NOT NULL,
   user_ID int NOT NULL,
@@ -22,7 +22,7 @@ create TABLE pages(
 create TABLE Complaints(
   ID int NOT NULL,
   head_line varchar2(225) NOT NULL,
-  details varchar2(1000) NOT NULL UNIQUE,
+  details varchar2(4000) NOT NULL UNIQUE,
   add_date DATE NOT NULL,
   status number DEFAULT 1,
   user_ID int NOT NULL,

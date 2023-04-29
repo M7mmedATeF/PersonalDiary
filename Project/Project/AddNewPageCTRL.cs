@@ -49,6 +49,7 @@ namespace Project
                 editMood();
             else
                 addMood();
+            myDiary.resetDiaryPanel();
             HomeController.Navigate(containerPanel, myDiary);
         }
 
