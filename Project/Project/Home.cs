@@ -51,10 +51,6 @@ namespace Project
             compPanel = new MyComplaints(connection, userData, ContainerPanel);
         }
 
-        private void Home_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -91,17 +87,23 @@ namespace Project
             viewDiaryPanel.goBack += new EventHandler(this.button1_Click);
             HomeController.Navigate(ContainerPanel, viewDiaryPanel);
         }
-
-        private void NavPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             logout = true;
             this.Close();
             loginForm.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            crystalreport cr = new crystalreport();
+            cr.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            crystalreport2cs cr2 = new crystalreport2cs();
+             cr2.Show();
         }
     }
 }

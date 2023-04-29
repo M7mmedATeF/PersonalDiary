@@ -19,7 +19,7 @@ namespace Project
         public Form1()
         {
             InitializeComponent();
-            conn = new OracleConnection("Data source=orcl;User Id=hr;Password = hr;");
+            conn = new OracleConnection("Data source=orcl;User Id=scott;Password = SYSTEM;");
             conn.Open();
         }
 
@@ -113,9 +113,9 @@ namespace Project
                     regCMD.ExecuteNonQuery();
                     registerPanel.SendToBack();
                 }
-                catch
+                catch(Exception error)
                 {
-                    MessageBox.Show("Somthing went wrong, Please try again later");
+                    MessageBox.Show(error.ToString());
                 }
 
                 MessageBox.Show("User registerd successfully");
