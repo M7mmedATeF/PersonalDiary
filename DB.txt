@@ -1,0 +1,54 @@
+create TABLE Users(
+  ID int NOT NULL,
+  name varchar2(225) NOT NULL,
+  user_name varchar2(225) NOT NULL UNIQUE,
+  password varchar2(225) NOT NULL,
+  email varchar2(225) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+create TABLE pages(
+  ID int NOT NULL,
+  head_line varchar(225) NOT NULL,
+  details varchar(1000) NOT NULL UNIQUE,
+  add_date DATE NOT NULL,
+  last_modified DATE NOT NULL,
+  user_ID int NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (user_ID) REFERENCES users(ID)
+);
+
+create TABLE Complaints(
+  ID int NOT NULL,
+  head_line varchar2(225) NOT NULL,
+  details varchar2(1000) NOT NULL UNIQUE,
+  add_date DATE NOT NULL,
+  status number DEFAULT 1,
+  user_ID int NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (user_ID) REFERENCES users(ID)
+);
+
+CREATE SEQUENCE userIdSeq START WITH 1;
+CREATE SEQUENCE pageIdSeq START WITH 1;
+CREATE SEQUENCE compIdSeq START WITH 1;
+
+create or replace procedure registUser
+(rname in varchar2, runame in varchar2, remail in varchar2, rpass in varchar2)
+as
+begin
+INSERT into users 
+(ID ,name, user_name, email, password) 
+values (userIdSeq.nextval ,rname, runame, remail, rpass);
+end;
+
+Create or replace PROCEDURE addPage
+(headLine in VARCHAR, pagedetails in VARCHAR, userID in NUMBER)
+as
+BEGIN
+INSERT INTO pages
+(id, head_line, details, add_date, last_modified, user_id)
+VALUES
+(pageIdSeq.nextval, headline, pagedetails, current_date, current_date, userid);
+END;
+
